@@ -4,9 +4,7 @@ import base_url.JsonplaceholderBaseUrl;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
-import pojos.JsonplaceholderPojo;
-
-import java.util.HashMap;
+import pojos.JsonPlaceHolderPojo;
 
 import static io.restassured.RestAssured.given;
 import static org.testng.AssertJUnit.assertEquals;
@@ -38,13 +36,13 @@ public class Post03Pojo extends JsonplaceholderBaseUrl {
         //SET THE URL
         spec.pathParam("1","todos");
         //set the expected data
-        JsonplaceholderPojo expectedData=new JsonplaceholderPojo(55,"Tidy your room",false);
+        JsonPlaceHolderPojo expectedData=new JsonPlaceHolderPojo(55,"Tidy your room",false);
         System.out.println("expectedData"+expectedData);
         //Send the Post Request and get the response
         Response response=given().spec(spec).contentType(ContentType.JSON).body(expectedData).when().post("/{1}");
         response.prettyPrint();
         //Do assertion
-        JsonplaceholderPojo actualData=response.as(JsonplaceholderPojo.class);
+        JsonPlaceHolderPojo actualData=response.as(JsonPlaceHolderPojo.class);
         System.out.println("actualData"+actualData);
 
         assertEquals(201,response.statusCode());
