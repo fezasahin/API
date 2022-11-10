@@ -1,6 +1,15 @@
 package get_request;
 
-public class ödev1 {
+import base_url.AutomationexercisseBaseUrl;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import org.testng.annotations.Test;
+
+import java.util.Map;
+
+import static io.restassured.RestAssured.given;
+
+public class ödev1 extends AutomationexercisseBaseUrl {
     /*
 Given
     https://automationexercise.com/api/productsList
@@ -15,4 +24,16 @@ And
 And
      There must be 12 Women, 9 Men, 13 Kids usertype in products
   */
+
+    @Test
+    public void odev1(){
+
+        spec.pathParam("1","productsList");
+
+        Response response=given().spec(spec).
+                when().get("/{1}");
+        response.prettyPrint();
+
+
+    }
 }

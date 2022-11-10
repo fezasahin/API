@@ -1,6 +1,6 @@
 package ödevler;
 
-public class ödev4 {
+public class odev4 {
 
     //4: Map ile ve Pojo Class ile ayrı ayrı Object Mapper kullanarak yapınız.
   /*

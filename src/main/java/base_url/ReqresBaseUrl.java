@@ -4,10 +4,10 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.BeforeMethod;
 
-public class RegresBaseUrl {
+public class ReqresBaseUrl {
     protected RequestSpecification spec;
     @BeforeMethod
     public void setup(){
-        spec = new RequestSpecBuilder().setBaseUri("https://regres.in//api.com").build();
+        spec = new RequestSpecBuilder().setBaseUri("https://regres.in/api").build();
     }
 }

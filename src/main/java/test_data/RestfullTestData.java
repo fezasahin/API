@@ -14,8 +14,7 @@ public class RestfullTestData {
 
     public Map<String,Object> expectedData(String firstname,String lastname,
                                            Integer totalprice,
-                                           Boolean depositpaid,
-                                           Map<String,String> bookingdates){
+                                           Boolean depositpaid, Map<String,String> bookingdates){
 
         Map<String,Object> expectedData= new HashMap<>();
         expectedData.put("firstname",firstname);

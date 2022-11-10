@@ -1,6 +1,6 @@
 package ödevler;
 
-public class ödev3 {
+public class odev3 {
 //3: Map ile ve Pojo Class ile ayrı ayrı Gson kullanarak yapınız.
 
 /*

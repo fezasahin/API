@@ -1,6 +1,6 @@
 package ödevler;
 
-public class ödev2 {
+public class odev2 {
 //2:  Map ve Pojo Class ile ayrı ayrı yapınız.
 /*
         Given
